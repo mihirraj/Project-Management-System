@@ -1,0 +1,29 @@
+c:\users\administrator\documents\visual studio 2012\Projects\PMS\PMS\bin\PMS.dll
+c:\users\administrator\documents\visual studio 2012\Projects\PMS\PMS\bin\PMS.pdb
+c:\users\administrator\documents\visual studio 2012\Projects\PMS\PMS\obj\Debug\PMS.dll
+c:\users\administrator\documents\visual studio 2012\Projects\PMS\PMS\obj\Debug\PMS.pdb
+c:\users\administrator\documents\visual studio 2012\Projects\PMS\PMS\obj\Debug\PMS.csprojResolveAssemblyReference.cache
+E:\sem8\BTP\PMS\PMS\bin\PMS.dll.config
+E:\sem8\BTP\PMS\PMS\bin\PMS.dll
+E:\sem8\BTP\PMS\PMS\bin\PMS.pdb
+E:\sem8\BTP\PMS\PMS\obj\Debug\PMS.csprojResolveAssemblyReference.cache
+E:\sem8\BTP\PMS\PMS\obj\Debug\PMS.dll
+E:\sem8\BTP\PMS\PMS\obj\Debug\PMS.pdb
+E:\sem8\BTP\PMS\PMS\bin\AjaxControlToolkit.dll
+E:\sem8\BTP\PMS\PMS\bin\AjaxControlToolkit.pdb
+E:\sem8\BTP\PMS\PMS\bin\ar\AjaxControlToolkit.resources.dll
+E:\sem8\BTP\PMS\PMS\bin\cs\AjaxControlToolkit.resources.dll
+E:\sem8\BTP\PMS\PMS\bin\de\AjaxControlToolkit.resources.dll
+E:\sem8\BTP\PMS\PMS\bin\es\AjaxControlToolkit.resources.dll
+E:\sem8\BTP\PMS\PMS\bin\fr\AjaxControlToolkit.resources.dll
+E:\sem8\BTP\PMS\PMS\bin\he\AjaxControlToolkit.resources.dll
+E:\sem8\BTP\PMS\PMS\bin\hi\AjaxControlToolkit.resources.dll
+E:\sem8\BTP\PMS\PMS\bin\it\AjaxControlToolkit.resources.dll
+E:\sem8\BTP\PMS\PMS\bin\ja\AjaxControlToolkit.resources.dll
+E:\sem8\BTP\PMS\PMS\bin\ko\AjaxControlToolkit.resources.dll
+E:\sem8\BTP\PMS\PMS\bin\nl\AjaxControlToolkit.resources.dll
+E:\sem8\BTP\PMS\PMS\bin\pt\AjaxControlToolkit.resources.dll
+E:\sem8\BTP\PMS\PMS\bin\ru\AjaxControlToolkit.resources.dll
+E:\sem8\BTP\PMS\PMS\bin\tr-TR\AjaxControlToolkit.resources.dll
+E:\sem8\BTP\PMS\PMS\bin\zh-CHS\AjaxControlToolkit.resources.dll
+E:\sem8\BTP\PMS\PMS\bin\zh-CHT\AjaxControlToolkit.resources.dll

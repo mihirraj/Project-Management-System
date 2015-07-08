@@ -1,0 +1,228 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PMS.master.cs" Inherits="PMS.PMS" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <style>
+        .black .ajax__calendar_container
+{
+width:190px;
+background-color: #000000; border:solid 1px #666666;
+-moz-border-radius-topleft: 8px; -webkit-border-top-left-radius: 8px; -khtml-border-top-left-radius: 8px; border-top-left-radius: 8px;
+-moz-border-radius-topright: 8px; -webkit-border-top-right-radius: 8px; -khtml-border-top-right-radius: 8px; border-top-right-radius: 8px; 
+-moz-border-radius-bottomleft: 8px; -webkit-border-bottom-left-radius: 8px; -khtml-border-bottom-left-radius: 8px; border-bottom-left-radius: 8px;
+-moz-border-radius-bottomright: 8px; -webkit-border-bottom-right-radius: 8px; -khtml-border-bottom-right-radius: 8px; border-bottom-right-radius: 8px;
+}
+.black .ajax__calendar_body
+{
+width:180px;
+height:150px;
+background-color: #000000; border: solid 1px #666666;
+}
+.black .ajax__calendar_header
+{
+background-color: #626262; margin-bottom: 8px;
+-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;
+-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px; 
+-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;
+-moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px;
+} 
+.black .ajax__calendar_title
+{
+color: #ffffff; padding-top: 3px;
+}
+.black .ajax__calendar_next,
+.black .ajax__calendar_prev
+{
+border:solid 4px #ffffff;
+background-color: #ffffff;
+-moz-border-radius-topleft: 18px; -webkit-border-top-left-radius: 18px; -khtml-border-top-left-radius: 18px; border-top-left-radius: 18px;
+-moz-border-radius-topright: 18px; -webkit-border-top-right-radius: 18px; -khtml-border-top-right-radius: 18px; border-top-right-radius: 18px; 
+-moz-border-radius-bottomleft: 18px; -webkit-border-bottom-left-radius: 18px; -khtml-border-bottom-left-radius: 18px; border-bottom-left-radius: 18px;
+-moz-border-radius-bottomright: 18px; -webkit-border-bottom-right-radius: 18px; -khtml-border-bottom-right-radius: 18px; border-bottom-right-radius: 18px;
+}
+.black .ajax__calendar_hover .ajax__calendar_next,
+.black .ajax__calendar_hover .ajax__calendar_prev
+{
+border:solid 4px #328BC8;
+background-color: #ffffff;
+-moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px;
+-moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px; 
+-moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;
+-moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px;
+}
+.black .ajax__calendar_dayname
+{
+text-align:center; margin-bottom: 4px; margin-top: 2px;
+color:#ffffff;
+background-color: #000000;
+} 
+.black .ajax__calendar_day,
+.black .ajax__calendar_month,
+.black .ajax__calendar_year
+{
+margin:1px 1px 1px 1px;
+text-align:center;
+border:solid 1px #000000;
+color:#ffffff;
+background-color: #626262;
+}
+.black .ajax__calendar_hover .ajax__calendar_day,
+.black .ajax__calendar_hover .ajax__calendar_month,
+.black .ajax__calendar_hover .ajax__calendar_year
+{
+color: #ffffff; font-weight:bold; background-color: #328BC8;border:solid 1px #328BC8;
+}
+.black .ajax__calendar_active .ajax__calendar_day,
+.black .ajax__calendar_active .ajax__calendar_month,
+.black .ajax__calendar_active .ajax__calendar_year
+{
+color: #ffffff; font-weight:bold; background-color: #F7B64A; 
+}
+.black .ajax__calendar_today .ajax__calendar_day
+{
+color: #ffffff; font-weight:bold; background-color: #F7B64A; 
+}
+.black .ajax__calendar_other,
+.black .ajax__calendar_hover .ajax__calendar_today
+{
+color: #ffffff;
+font-weight:bold;
+}
+.black .ajax__calendar_days
+{
+background-color: #000000;
+}
+    </style>
+    <script src="jquery-1.11.2.min.js"></script>
+    <asp:PlaceHolder runat="server">
+    <script type="text/javascript">
+
+       
+    
+
+
+
+        function myfun1() {
+            window.location.href = '<%# Page.ResolveUrl("~/WebForm8.aspx") %>'
+        }
+        function  myfun()
+        {
+            var role = '<%= Session["loginrole"] %>';
+
+          
+
+            if (role == 1)
+            {
+                window.location.href = '<%# Page.ResolveUrl("~/ProfileManager.aspx") %>'
+            }
+            else if (role == 2)
+            {
+               
+                window.location.href = '<%# Page.ResolveUrl("~/ProfileTeamLeader.aspx") %>'
+
+
+               
+            }
+            else if (role == 3)
+            {
+                window.location.href = '<%# Page.ResolveUrl("~/ProfileJunior.aspx") %>'
+            }
+            else
+            {
+                window.location.href = '<%# Page.ResolveUrl("~/ProfileAdmin.aspx") %>'
+            }
+
+          
+
+        }
+       
+    </script>
+
+    </asp:PlaceHolder>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PMS</title>
+    <!-- BOOTSTRAP STYLES-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME ICONS STYLES-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!--CUSTOM STYLES-->
+    <link href="assets/css/style.css" rel="stylesheet" />
+      <!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+ 
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a  class="navbar-brand" href="index.html">PMS 
+
+                </a>
+            </div>
+
+            <div class="notifications-wrapper">
+<ul class="nav">
+               
+               
+              
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user-plus"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                     
+
+                        <li><a onclick="myfun();"><i class="fa fa-user-plus"></i>My Profile </a>
+                        </li>
+
+                        <li class="divider"></li>
+                        <li><a onclick="myfun1();"><i class="fa fa-sign-out"></i> Logout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+               
+            </div>
+        </nav>
+        <!-- /. NAV TOP  -->
+        <asp:ContentPlaceHolder ID="cp1" runat="server">
+        <!-- /. SIDEBAR MENU (navbar-side) -->
+        <div id="page-wrapper" class="page-wrapper-cls">
+           
+
+
+                  <!-- /. PAGE WRAPPER  -->
+    </div>
+            </asp:ContentPlaceHolder> 
+        </div>
+    <!-- /. WRAPPER  -->
+    <footer >
+        &copy; Project Management System | By : <a href="http://www.designbootstrap.com/" target="_blank">Mihir & Achint</a>
+    </footer>
+    <!-- /. FOOTER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.11.1.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
+
+
+</body>
+</html>
